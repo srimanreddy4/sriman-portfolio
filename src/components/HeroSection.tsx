@@ -1,9 +1,11 @@
 
 import React, { useEffect, useRef } from 'react';
 import AnimatedText from './AnimatedText';
+import { Robot } from "lucide-react";
 
 const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const robotRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -25,6 +27,24 @@ const HeroSection = () => {
         
         el.style.transform = `translate(${moveX * speed}px, ${moveY * speed}px)`;
       });
+      
+      // Handle robot head rotation following cursor
+      if (robotRef.current) {
+        // Calculate the direction to look based on cursor position
+        const robotBox = robotRef.current.getBoundingClientRect();
+        const robotCenterX = robotBox.left + robotBox.width / 2;
+        const robotCenterY = robotBox.top + robotBox.height / 2;
+        
+        // Angle calculation for robot head rotation
+        const angle = Math.atan2(clientY - robotCenterY, clientX - robotCenterX);
+        const rotation = angle * (180 / Math.PI);
+        
+        // Apply rotation transformation to robot head
+        const robotHead = robotRef.current.querySelector('.robot-head') as HTMLElement;
+        if (robotHead) {
+          robotHead.style.transform = `rotate(${rotation * 0.2}deg)`;
+        }
+      }
     };
     
     document.addEventListener('mousemove', handleMouseMove);
@@ -58,12 +78,12 @@ const HeroSection = () => {
           
           <div className="overflow-hidden mb-6">
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-400 animate-text-reveal" style={{ animationDelay: '400ms' }}>
-              I build innovative web experiences
+              I build intelligent digital experiences
             </h2>
           </div>
           
           <AnimatedText 
-            text="Frontend Web Developer specializing in creating exceptional digital experiences. Currently focused on building responsive and performant web applications that solve real-world problems."
+            text="Software developer passionate about crafting cutting-edge solutions that bridge human needs and technological innovation. Specializing in responsive web applications enhanced with AI capabilities, I transform complex challenges into elegant, user-centric experiences."
             className="text-muted-foreground max-w-xl text-lg mb-8"
             delay={600}
           />
@@ -84,6 +104,58 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+      
+      {/* Tech robot */}
+      <div 
+        ref={robotRef} 
+        className="hidden md:flex absolute right-10 top-1/3 transform -translate-y-1/2 items-center justify-center w-32 h-40"
+        data-speed="-1.2"
+      >
+        <div className="robot-container relative">
+          {/* Robot body */}
+          <div className="robot-body w-28 h-32 bg-tech-800 rounded-lg border-2 border-neon-blue flex flex-col items-center justify-center relative overflow-hidden">
+            {/* Robot head */}
+            <div className="robot-head w-16 h-16 bg-tech-700 rounded-full border border-neon-purple mb-2 relative transition-transform duration-300 ease-out">
+              {/* Eyes */}
+              <div className="absolute top-4 left-3 w-3 h-3 rounded-full bg-neon-blue animate-pulse"></div>
+              <div className="absolute top-4 right-3 w-3 h-3 rounded-full bg-neon-blue animate-pulse animation-delay-500"></div>
+              {/* Mouth */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-1.5 bg-neon-green rounded-full"></div>
+              {/* Antenna */}
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-1 h-4 bg-neon-purple">
+                <div className="w-2 h-2 rounded-full bg-neon-green absolute -top-1 left-1/2 transform -translate-x-1/2 animate-pulse"></div>
+              </div>
+            </div>
+            
+            {/* Robot body details */}
+            <div className="w-16 h-4 bg-tech-900 rounded flex items-center justify-around mb-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-neon-green"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-yellow-400"></div>
+            </div>
+            
+            {/* Circuit pattern overlay */}
+            <div className="absolute inset-0 bg-circuit-pattern opacity-20"></div>
+            
+            {/* Arm waving */}
+            <div className="absolute -right-4 top-10 w-8 h-3 bg-tech-700 rounded-full origin-left animate-[wave_1.5s_ease-in-out_infinite] border border-neon-blue">
+              <div className="absolute right-0 w-3 h-3 bg-tech-700 rounded-full border border-neon-blue"></div>
+            </div>
+            
+            {/* Blinking lights */}
+            <div className="absolute bottom-2 left-2 right-2 grid grid-cols-5 gap-1">
+              <div className="h-1 rounded-full bg-neon-blue animate-pulse"></div>
+              <div className="h-1 rounded-full bg-neon-purple animate-pulse animation-delay-300"></div>
+              <div className="h-1 rounded-full bg-neon-green animate-pulse animation-delay-600"></div>
+              <div className="h-1 rounded-full bg-neon-purple animate-pulse animation-delay-900"></div>
+              <div className="h-1 rounded-full bg-neon-blue animate-pulse animation-delay-1200"></div>
+            </div>
+          </div>
+          
+          {/* Robot shadow */}
+          <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-20 h-2 bg-black/30 rounded-full blur-sm"></div>
         </div>
       </div>
       

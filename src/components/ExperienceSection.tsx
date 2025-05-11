@@ -77,7 +77,15 @@ const ExperienceSection = () => {
                   value={exp.id}
                   className="interactive-element data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue"
                 >
-                  {exp.company}
+                  <a 
+                    href={exp.id === 'nrg' ? exp.link : undefined}
+                    target={exp.id === 'nrg' ? "_blank" : undefined}
+                    rel={exp.id === 'nrg' ? "noopener noreferrer" : undefined}
+                    onClick={(e) => exp.id === 'nrg' ? e.stopPropagation() : null}
+                    className={exp.id === 'nrg' ? "hover:text-neon-purple" : undefined}
+                  >
+                    {exp.company}
+                  </a>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -124,7 +132,7 @@ const ExperienceSection = () => {
                       rel="noopener noreferrer"
                       className="interactive-element text-sm text-neon-blue hover:underline inline-flex items-center gap-1"
                     >
-                      View Certificate/Link
+                      Link
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M7 17L17 7"/>
                         <path d="M7 7h10v10"/>
