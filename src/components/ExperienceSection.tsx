@@ -77,19 +77,7 @@ const ExperienceSection = () => {
                   value={exp.id}
                   className="interactive-element font-sans data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue"
                 >
-                  {exp.id === 'nrg' ? (
-                    <a 
-                      href={exp.link}
-                      target="_blank"
-                      rel="noopener noreferrer" 
-                      className="hover:text-neon-purple"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {exp.company}
-                    </a>
-                  ) : (
-                    exp.company
-                  )}
+                  {exp.company}
                 </TabsTrigger>
               ))}
             </TabsList>

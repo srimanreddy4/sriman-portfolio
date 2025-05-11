@@ -50,7 +50,7 @@ const AboutSection = () => {
               text="Hello! I'm Svayam Kapadia, a Computer Science student at IIIT Pune with a passion for building exceptional web applications and solving complex problems."
               className="mb-4 text-lg font-sans"
               highlight={true}
-              highlightWords={["Computer Science", "web applications", "solving complex problems"]}
+              highlightWords={["Computer Science", "web applications"]}
               delay={300}
             />
             
@@ -58,7 +58,7 @@ const AboutSection = () => {
               text="I enjoy creating technology that solves real-world problems. My experience ranges from developing responsive frontends to implementing secure backends. I'm constantly exploring new technologies and methodologies to improve my skills."
               className="mb-4 font-sans"
               highlight={true}
-              highlightWords={["real-world problems", "responsive frontends", "secure backends", "new technologies"]}
+              highlightWords={["real-world problems", "new technologies"]}
               delay={500}
             />
             
@@ -66,15 +66,14 @@ const AboutSection = () => {
               text="Currently, I'm focused on building accessible, human-centered products at Billbox AI while pursuing my Bachelor's degree. My goal is to combine technical expertise with creative problem-solving to create impactful solutions."
               className="mb-4 font-sans"
               highlight={true}
-              highlightWords={["Billbox AI", "technical expertise", "creative problem-solving", "impactful solutions"]}
+              highlightWords={["technical expertise"]}
               delay={700}
             />
             
             <AnimatedText
               text="Beyond coding, I'm actively involved in hackathons, open-source contributions, and technical competitions where I've achieved notable results, including winning SIH 2024."
               className="font-sans"
-              highlight={true}
-              highlightWords={["hackathons", "open-source contributions", "technical competitions", "SIH 2024"]}
+              highlight={false}
               delay={900}
             />
             
