@@ -107,42 +107,50 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Tech robot */}
+      {/* Humanoid Tech robot */}
       <div 
         ref={robotRef} 
-        className="hidden md:flex absolute right-10 top-1/3 transform -translate-y-1/2 items-center justify-center w-32 h-40"
+        className="hidden md:flex absolute right-10 top-1/3 transform -translate-y-1/2 items-center justify-center w-40 h-56"
         data-speed="-1.2"
       >
         <div className="robot-container relative">
           {/* Robot body */}
-          <div className="robot-body w-28 h-32 bg-tech-800 rounded-lg border-2 border-neon-blue flex flex-col items-center justify-center relative overflow-hidden">
+          <div className="robot-body w-32 h-40 bg-tech-800/90 rounded-md border-2 border-neon-blue flex flex-col items-center justify-center relative overflow-hidden">
             {/* Robot head */}
-            <div className="robot-head w-16 h-16 bg-tech-700 rounded-full border border-neon-purple mb-2 relative transition-transform duration-300 ease-out">
+            <div className="robot-head w-20 h-24 bg-tech-900 rounded-t-2xl rounded-b-md border border-neon-purple mb-2 relative transition-transform duration-300 ease-out">
               {/* Eyes */}
-              <div className="absolute top-4 left-3 w-3 h-3 rounded-full bg-neon-blue animate-pulse"></div>
-              <div className="absolute top-4 right-3 w-3 h-3 rounded-full bg-neon-blue animate-pulse animation-delay-500"></div>
-              {/* Mouth */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-1.5 bg-neon-green rounded-full"></div>
-              {/* Antenna */}
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-1 h-4 bg-neon-purple">
-                <div className="w-2 h-2 rounded-full bg-neon-green absolute -top-1 left-1/2 transform -translate-x-1/2 animate-pulse"></div>
+              <div className="flex justify-center space-x-6 mt-5">
+                <div className="w-3 h-1.5 rounded-full bg-neon-blue animate-pulse"></div>
+                <div className="w-3 h-1.5 rounded-full bg-neon-blue animate-pulse animation-delay-500"></div>
               </div>
+              {/* Mouth */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-neon-green rounded-full"></div>
             </div>
             
-            {/* Robot body details */}
-            <div className="w-16 h-4 bg-tech-900 rounded flex items-center justify-around mb-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-neon-green"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-yellow-400"></div>
+            {/* Robot torso */}
+            <div className="w-full h-16 bg-tech-900 rounded-md flex flex-col items-center justify-center">
+              {/* Chest plate */}
+              <div className="w-10 h-6 bg-tech-700 rounded-md flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-neon-green animate-pulse"></div>
+              </div>
+              
+              {/* Waist */}
+              <div className="w-14 h-3 bg-tech-800 mt-1.5 rounded-md border-t border-neon-blue/30"></div>
             </div>
             
             {/* Circuit pattern overlay */}
             <div className="absolute inset-0 bg-circuit-pattern opacity-20"></div>
             
-            {/* Arm waving */}
-            <div className="absolute -right-4 top-10 w-8 h-3 bg-tech-700 rounded-full origin-left animate-[wave_1.5s_ease-in-out_infinite] border border-neon-blue">
-              <div className="absolute right-0 w-3 h-3 bg-tech-700 rounded-full border border-neon-blue"></div>
+            {/* Arms */}
+            <div className="absolute -right-5 top-12 w-8 h-3 bg-tech-900 rounded-full origin-left animate-[wave_2s_ease-in-out_infinite] border border-neon-blue">
+              <div className="absolute right-0 w-4 h-4 bg-tech-900 rounded-full border border-neon-blue"></div>
             </div>
+            
+            <div className="absolute -left-5 top-12 w-8 h-3 bg-tech-900 rounded-full origin-right border border-neon-blue"></div>
+            
+            {/* Legs */}
+            <div className="absolute -bottom-6 left-3 w-4 h-8 bg-tech-900 rounded-b-lg border border-neon-blue"></div>
+            <div className="absolute -bottom-6 right-3 w-4 h-8 bg-tech-900 rounded-b-lg border border-neon-blue"></div>
             
             {/* Blinking lights */}
             <div className="absolute bottom-2 left-2 right-2 grid grid-cols-5 gap-1">

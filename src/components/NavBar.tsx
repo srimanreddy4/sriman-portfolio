@@ -56,7 +56,7 @@ const NavBar = () => {
             <a 
               key={index} 
               href={item.href}
-              className="interactive-element relative group text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300"
+              className="interactive-element relative group text-sm font-medium font-sans text-gray-300 hover:text-white transition-colors duration-300"
             >
               {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-blue group-hover:w-full transition-all duration-300"></span>
@@ -68,7 +68,7 @@ const NavBar = () => {
             href="https://drive.google.com/uc?export=download&id=1PoXc3_-V7dxd5MyhLAAnOHFdC8ApfyoI" 
             target="_blank"
             rel="noopener noreferrer"
-            className="interactive-element px-4 py-2 border border-neon-blue text-neon-blue rounded hover:bg-neon-blue/10 transition-all duration-300"
+            className="interactive-element px-4 py-2 border border-neon-blue text-neon-blue rounded hover:bg-neon-blue/10 transition-all duration-300 font-sans"
           >
             Resume
           </a>
@@ -109,7 +109,7 @@ const NavBar = () => {
                 key={index} 
                 href={item.href}
                 onClick={toggleMobileMenu}
-                className="interactive-element text-gray-300 hover:text-white hover:pl-2 transition-all duration-300"
+                className="interactive-element font-sans text-gray-300 hover:text-white hover:pl-2 transition-all duration-300"
               >
                 <span className="text-neon-blue mr-2">0{index + 1}.</span> {item.label}
               </a>
@@ -119,7 +119,7 @@ const NavBar = () => {
               href="https://drive.google.com/uc?export=download&id=1PoXc3_-V7dxd5MyhLAAnOHFdC8ApfyoI" 
               target="_blank"
               rel="noopener noreferrer"
-              className="interactive-element mt-4 block text-center px-4 py-2 border border-neon-blue text-neon-blue rounded hover:bg-neon-blue/10 transition-all duration-300"
+              className="interactive-element mt-4 block text-center px-4 py-2 border border-neon-blue text-neon-blue rounded hover:bg-neon-blue/10 transition-all duration-300 font-sans"
             >
               Resume
             </a>

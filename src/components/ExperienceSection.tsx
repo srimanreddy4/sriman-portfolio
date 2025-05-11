@@ -62,7 +62,7 @@ const ExperienceSection = () => {
       
       <div className="container mx-auto px-4">
         <div className="flex items-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">
+          <h2 className="text-2xl md:text-3xl font-bold text-white font-sans">
             <span className="text-neon-blue font-mono mr-2">02.</span> Where I've Worked
           </h2>
           <div className="h-px bg-gradient-to-r from-neon-blue to-transparent flex-grow ml-4"></div>
@@ -75,17 +75,21 @@ const ExperienceSection = () => {
                 <TabsTrigger
                   key={exp.id}
                   value={exp.id}
-                  className="interactive-element data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue"
+                  className="interactive-element font-sans data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue"
                 >
-                  <a 
-                    href={exp.id === 'nrg' ? exp.link : undefined}
-                    target={exp.id === 'nrg' ? "_blank" : undefined}
-                    rel={exp.id === 'nrg' ? "noopener noreferrer" : undefined}
-                    onClick={(e) => exp.id === 'nrg' ? e.stopPropagation() : null}
-                    className={exp.id === 'nrg' ? "hover:text-neon-purple" : undefined}
-                  >
-                    {exp.company}
-                  </a>
+                  {exp.id === 'nrg' ? (
+                    <a 
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="hover:text-neon-purple"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {exp.company}
+                    </a>
+                  ) : (
+                    exp.company
+                  )}
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -94,7 +98,7 @@ const ExperienceSection = () => {
               <TabsContent key={exp.id} value={exp.id} className="bg-tech-800/20 p-6 rounded-lg border border-border">
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-xl font-bold flex flex-wrap items-center gap-2">
+                    <h3 className="text-xl font-bold flex flex-wrap items-center gap-2 font-sans">
                       {exp.title} 
                       <span className="text-neon-blue">@</span>
                       <a
@@ -117,7 +121,7 @@ const ExperienceSection = () => {
                         key={i}
                         as="li"
                         text={point}
-                        className="flex items-start"
+                        className="flex items-start font-sans"
                         delay={i * 200}
                       >
                         <span className="text-neon-blue inline-block mr-3 mt-1.5">▹</span>
@@ -130,7 +134,7 @@ const ExperienceSection = () => {
                       href={exp.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="interactive-element text-sm text-neon-blue hover:underline inline-flex items-center gap-1"
+                      className="interactive-element text-sm text-neon-blue hover:underline inline-flex items-center gap-1 font-sans"
                     >
                       Link
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

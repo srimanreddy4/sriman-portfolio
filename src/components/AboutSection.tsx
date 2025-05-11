@@ -40,7 +40,7 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-start gap-10">
           <div className="md:w-3/5">
             <div className="flex items-center mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-bold text-white font-sans">
                 <span className="text-neon-blue font-mono mr-2">01.</span> About Me
               </h2>
               <div className="h-px bg-gradient-to-r from-neon-blue to-transparent flex-grow ml-4"></div>
@@ -48,34 +48,42 @@ const AboutSection = () => {
             
             <AnimatedText
               text="Hello! I'm Svayam Kapadia, a Computer Science student at IIIT Pune with a passion for building exceptional web applications and solving complex problems."
-              className="mb-4 text-lg"
+              className="mb-4 text-lg font-sans"
               highlight={true}
+              highlightWords={["Computer Science", "web applications", "solving complex problems"]}
               delay={300}
             />
             
             <AnimatedText 
               text="I enjoy creating technology that solves real-world problems. My experience ranges from developing responsive frontends to implementing secure backends. I'm constantly exploring new technologies and methodologies to improve my skills."
-              className="mb-4"
+              className="mb-4 font-sans"
+              highlight={true}
+              highlightWords={["real-world problems", "responsive frontends", "secure backends", "new technologies"]}
               delay={500}
             />
             
             <AnimatedText 
               text="Currently, I'm focused on building accessible, human-centered products at Billbox AI while pursuing my Bachelor's degree. My goal is to combine technical expertise with creative problem-solving to create impactful solutions."
-              className="mb-4"
+              className="mb-4 font-sans"
+              highlight={true}
+              highlightWords={["Billbox AI", "technical expertise", "creative problem-solving", "impactful solutions"]}
               delay={700}
             />
             
             <AnimatedText
               text="Beyond coding, I'm actively involved in hackathons, open-source contributions, and technical competitions where I've achieved notable results, including winning SIH 2024."
+              className="font-sans"
+              highlight={true}
+              highlightWords={["hackathons", "open-source contributions", "technical competitions", "SIH 2024"]}
               delay={900}
             />
             
             <div className="mt-6 reveal" style={{ transitionDelay: '1100ms' }}>
               <h3 className="text-lg font-mono text-neon-blue mb-3">Education</h3>
               <div className="p-4 bg-tech-800/50 border border-border rounded-lg neon-border card-hover">
-                <h4 className="font-bold">Indian Institute of Information Technology (IIIT), Pune</h4>
-                <p className="text-muted-foreground">Bachelor of Technology in Computer Science and Engineering</p>
-                <div className="flex justify-between mt-2">
+                <h4 className="font-bold font-sans">Indian Institute of Information Technology (IIIT), Pune</h4>
+                <p className="text-muted-foreground font-sans">Bachelor of Technology in Computer Science and Engineering</p>
+                <div className="flex justify-between mt-2 font-sans">
                   <span className="text-neon-green">9.41 CGPA</span>
                   <span className="text-gray-400">Nov. 2022 – May 2026</span>
                 </div>
@@ -93,7 +101,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-tech-800 rounded-lg overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-tech-900 to-tech-700 flex items-center justify-center">
                   {/* Replace with actual image if available */}
-                  <span className="text-6xl font-bold text-gradient">SK</span>
+                  <span className="text-6xl font-bold text-gradient font-sans">SK</span>
                 </div>
                 
                 {/* Tech pattern overlay */}
