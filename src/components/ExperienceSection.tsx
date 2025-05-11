@@ -55,6 +55,12 @@ const ExperienceSection = () => {
     }
   ];
 
+  const [activeTab, setActiveTab] = useState('billbox');
+
+  const handleTabClick = (tabId: string) => {
+    setActiveTab(tabId);
+  };
+
   return (
     <section id="experience" className="py-20 relative overflow-hidden">
       {/* Background elements */}
@@ -69,13 +75,14 @@ const ExperienceSection = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="billbox" className="w-full">
+          <Tabs defaultValue="billbox" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid md:grid-cols-4 grid-cols-2 gap-2 bg-tech-800/50 p-2 mb-8 rounded-lg">
               {experiences.map((exp) => (
                 <TabsTrigger
                   key={exp.id}
                   value={exp.id}
-                  className="interactive-element font-sans data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue"
+                  className="interactive-element font-sans data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue cursor-pointer"
+                  onClick={() => handleTabClick(exp.id)}
                 >
                   {exp.company}
                 </TabsTrigger>
