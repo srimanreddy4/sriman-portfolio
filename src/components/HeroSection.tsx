@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import AnimatedText from './AnimatedText';
-import { Robot } from "lucide-react";
+import { Bot } from "lucide-react";
 
 const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
