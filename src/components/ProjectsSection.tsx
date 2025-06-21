@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import AnimatedText from './AnimatedText';
 
@@ -78,6 +77,12 @@ const ProjectCard = ({
 const ProjectsSection = () => {
   const projects = [
     {
+      title: 'Svayam - Learning Ed-Tech Chatbot',
+      description: 'AI-powered educational chatbot that provides personalized answers based on user profile, knowledge level, and understanding, enhancing learning experience.',
+      tech: ['JavaScript', 'TypeScript', 'Python', 'PostgreSQL'],
+      link: '#'
+    },
+    {
       title: 'Travelling Postman',
       description: 'AI-driven mail routing solution that won 1st place in SIH 2024, calculating safety indexes for 700+ cities with 98% accuracy.',
       tech: ['Python', 'Next.js', 'PostgreSQL', 'IBM Watsonx'],
@@ -111,7 +116,7 @@ const ProjectsSection = () => {
           <div className="h-px bg-gradient-to-r from-neon-blue to-transparent flex-grow ml-4"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <AnimatedText key={index} text="" className="h-full" delay={index * 200}>
               <ProjectCard 

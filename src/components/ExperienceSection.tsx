@@ -6,11 +6,25 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const ExperienceSection = () => {
   const experiences = [
     {
+      id: 'nomura',
+      title: 'Chief Data Office Intern',
+      company: 'Nomura',
+      link: '#',
+      period: 'June 2025 - Present',
+      location: 'Remote',
+      description: [
+        'Specialized in data governance frameworks, implementing comprehensive policies that improved data quality by 35%.',
+        'Developed Python scripts for API calls with Alation and Marquez, automating data catalog management processes.',
+        'Created detailed data lineages mapping complex data flows across enterprise systems, enhancing data traceability by 40%.',
+        'Collaborated with cross-functional teams to establish data governance best practices and compliance standards.'
+      ]
+    },
+    {
       id: 'billbox',
-      title: 'Frontend Web Developer',
+      title: 'Software Development Intern',
       company: 'Billbox AI',
       link: 'https://billboxa.ai/',
-      period: 'Dec. 2024 - Present',
+      period: 'Dec. 2024 - June 2025',
       location: 'Remote',
       description: [
         'Built responsive UI with Framer, boosting mobile engagement by 25% and page speed by 30%.',
@@ -55,7 +69,7 @@ const ExperienceSection = () => {
     }
   ];
 
-  const [activeTab, setActiveTab] = useState('billbox');
+  const [activeTab, setActiveTab] = useState('nomura');
 
   const handleTabClick = (tabId: string) => {
     setActiveTab(tabId);
@@ -75,8 +89,8 @@ const ExperienceSection = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="billbox" value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid md:grid-cols-4 grid-cols-2 gap-2 bg-tech-800/50 p-2 mb-8 rounded-lg">
+          <Tabs defaultValue="nomura" value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid md:grid-cols-5 grid-cols-2 gap-2 bg-tech-800/50 p-2 mb-8 rounded-lg">
               {experiences.map((exp) => (
                 <TabsTrigger
                   key={exp.id}

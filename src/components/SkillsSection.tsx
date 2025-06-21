@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import AnimatedText from './AnimatedText';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -72,6 +71,7 @@ const SkillsSection = () => {
   ];
 
   const achievements = [
+    { title: 'Gold Level', description: 'WorldQuant University' },
     { title: 'AIR-4', description: 'Naukri Campus EROH \'25' },
     { title: 'Winner', description: 'SIH 2024' },
     { title: 'Semifinalist', description: 'Tata Imagination Challenge \'24' },
