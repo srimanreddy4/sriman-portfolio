@@ -11,7 +11,7 @@ const ExperienceSection = () => {
       company: 'Nomura',
       link: '#',
       period: 'June 2025 - Present',
-      location: 'Remote',
+      location: 'Mumbai, India',
       description: [
         'Specialized in data governance frameworks, implementing comprehensive policies that improved data quality by 35%.',
         'Developed Python scripts for API calls with Alation and Marquez, automating data catalog management processes.',
