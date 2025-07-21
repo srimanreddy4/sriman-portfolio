@@ -2,8 +2,6 @@
 
 ## Project info
 
-**URL**: https://svayam-kapadia-portfolio.vercel.app/
-
 ## How can I edit this code?
 
 **Use your preferred IDE**

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import AnimatedText from './AnimatedText';
 import { Bot } from "lucide-react";
@@ -71,19 +70,19 @@ const HeroSection = () => {
           
           <div className="overflow-hidden mb-4">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight animate-text-reveal" style={{ animationDelay: '200ms' }}>
-              <span className="text-white">Svayam </span>
-              <span className="text-gradient">Kapadia</span>
+              <span className="text-white">Sriman </span>
+              <span className="text-gradient">Reddy</span>
             </h1>
           </div>
           
           <div className="overflow-hidden mb-6">
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-400 animate-text-reveal" style={{ animationDelay: '400ms' }}>
-              I build intelligent digital experiences
+              I build robust AI-powered solutions
             </h2>
           </div>
           
           <AnimatedText 
-            text="Software developer passionate about crafting cutting-edge solutions that bridge human needs and technological innovation. Specializing in responsive web applications enhanced with AI capabilities, I transform complex challenges into elegant, user-centric experiences."
+            text="Computer Science student at IIT Gandhinagar passionate about leveraging technology to solve complex, real-world problems. Specializing in agentic AI systems, machine learning, and enterprise-level database solutions that create meaningful impact."
             className="text-muted-foreground max-w-xl text-lg mb-8"
             delay={600}
           />

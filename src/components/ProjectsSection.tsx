@@ -77,28 +77,34 @@ const ProjectCard = ({
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Svayam - Learning Ed-Tech Chatbot',
-      description: 'AI-powered educational chatbot that provides personalized answers based on user profile, knowledge level, and understanding, enhancing learning experience.',
-      tech: ['JavaScript', 'TypeScript', 'Python', 'PostgreSQL'],
+      title: 'Lucent Programming Language Implementation',
+      description: 'Designed and implemented a statically-typed programming language with robust control flow, first-class functions with closures, and user-defined types. Built a bytecode compiler and virtual machine with optimizations.',
+      tech: ['Python', 'Compiler Design', 'Virtual Machine', 'Bytecode'],
+      link: 'https://github.com/VenkatReddybathuni/Compilers'
+    },
+    {
+      title: 'LLM Chatbot for Hospitality',
+      description: 'Comprehensive hospitality management system with voice and chat capabilities for bookings, services, and FAQs. Features real-time dashboard, telephony integration, and personalized AI suggestions.',
+      tech: ['Node.js', 'Express', 'React', 'Vite', 'MongoDB', 'Socket.io'],
       link: '#'
     },
     {
-      title: 'Travelling Postman',
-      description: 'AI-driven mail routing solution that won 1st place in SIH 2024, calculating safety indexes for 700+ cities with 98% accuracy.',
-      tech: ['Python', 'Next.js', 'PostgreSQL', 'IBM Watsonx'],
-      link: 'https://travelling-postman-3hl4.vercel.app/'
+      title: 'Drowsy Driving Detection using BCI Technology',
+      description: 'Machine learning model (SVM-RBF) trained on EEG data for classifying attention states. Deployed on Arduino Nano using TensorFlow Lite with custom 1-electrode EEG headset and 3D-printed components.',
+      tech: ['Python', 'Machine Learning', 'TensorFlow Lite', 'Arduino', 'EEG'],
+      link: 'https://github.com/srimanreddy4/EEG_drowsydriving'
     },
     {
-      title: 'Medicine Prescriber',
-      description: 'Java-based prescription system that reduces diagnosis time by 25% and enhances accuracy for up to 10 diseases.',
-      tech: ['Java', 'JavaFX', 'Maven', 'MySQL'],
-      link: 'https://github.com/K-Svayam05/Medicine-Prescriber'
+      title: 'Food Delivery Database System',
+      description: 'Complete food delivery system for IIT Gandhinagar with stakeholder consultations, ER diagram design, and relational database. Backend with Flask and SQL including defenses against SQL injection and XSS attacks.',
+      tech: ['Flask', 'SQL', 'Database Design', 'Security', 'Python'],
+      link: 'https://github.com/Sparky1743/Food-Delivery-System-Website'
     },
     {
-      title: 'Company\'s Profit Prediction Model',
-      description: 'ML model with 96% accuracy for financial forecasting, saving 50+ hours/month in analysis with better decision-making.',
-      tech: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
-      link: 'https://github.com/K-Svayam05/ML--Company-s-Profit-Prediction/tree/main'
+      title: 'AI Resume Analyser',
+      description: 'Intelligent resume comparison tool that scores resumes, analyzes advantages and disadvantages between candidates, and selects the best resume from multiple options using advanced AI algorithms.',
+      tech: ['React', 'Vite', 'AI/ML', 'Natural Language Processing'],
+      link: '#'
     }
   ];
 
@@ -132,7 +138,7 @@ const ProjectsSection = () => {
         
         <div className="mt-12 text-center">
           <a 
-            href="https://github.com/K-Svayam05" 
+            href="#" 
             target="_blank" 
             rel="noopener noreferrer"
             className="interactive-element inline-flex items-center gap-2 px-6 py-3 border border-neon-blue text-neon-blue rounded-md hover:bg-neon-blue/10 transition-all duration-300"

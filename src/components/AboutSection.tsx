@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import AnimatedText from './AnimatedText';
 
@@ -47,31 +46,31 @@ const AboutSection = () => {
             </div>
             
             <AnimatedText
-              text="Hello! I'm Svayam Kapadia, a Computer Science student at IIIT Pune with a passion for building exceptional web applications and solving complex problems."
+              text="Hello! I'm Sriman Reddy, a senior undergraduate in Computer Science and Engineering at IIT Gandhinagar with a passion for leveraging technology to build robust solutions for complex, real-world problems."
               className="mb-4 text-lg font-sans"
               highlight={true}
-              highlightWords={["Computer Science", "web applications"]}
+              highlightWords={["Computer Science and Engineering", "robust solutions", "real-world problems"]}
               delay={300}
             />
             
             <AnimatedText 
-              text="I enjoy creating technology that solves real-world problems. My experience ranges from developing responsive frontends to implementing secure backends. I'm constantly exploring new technologies and methodologies to improve my skills."
+              text="My experience is diverse, spanning from developing agentic AI systems and contributing to published research on Hugging Face models, to working with enterprise-level database systems. I am driven by a desire to apply my skills in machine learning, software development, and large-scale database management."
               className="mb-4 font-sans"
               highlight={true}
-              highlightWords={["real-world problems", "new technologies"]}
+              highlightWords={["agentic AI systems", "published research", "machine learning", "database management"]}
               delay={500}
             />
             
             <AnimatedText 
-              text="Currently, I'm focused on building accessible, human-centered products at Billbox AI while pursuing my Bachelor's degree. My goal is to combine technical expertise with creative problem-solving to create impactful solutions."
+              text="Beyond my formal projects, I am an active open-source contributor and enjoy exploring the latest in AI through my blog and hands-on mini-projects. I'm always looking for the next challenging problem to solve and create impactful, efficient software solutions."
               className="mb-4 font-sans"
               highlight={true}
-              highlightWords={["technical expertise"]}
+              highlightWords={["open-source contributor", "challenging problem"]}
               delay={700}
             />
             
             <AnimatedText
-              text="Beyond coding, I'm actively involved in hackathons, open-source contributions, and technical competitions where I've achieved notable results, including winning SIH 2024."
+              text=""
               className="font-sans"
               highlight={false}
               delay={900}
@@ -80,11 +79,11 @@ const AboutSection = () => {
             <div className="mt-6 reveal" style={{ transitionDelay: '1100ms' }}>
               <h3 className="text-lg font-mono text-neon-blue mb-3">Education</h3>
               <div className="p-4 bg-tech-800/50 border border-border rounded-lg neon-border card-hover">
-                <h4 className="font-bold font-sans">Indian Institute of Information Technology (IIIT), Pune</h4>
+                <h4 className="font-bold font-sans">Indian Institute of Technology (IIT), Gandhinagar</h4>
                 <p className="text-muted-foreground font-sans">Bachelor of Technology in Computer Science and Engineering</p>
                 <div className="flex justify-between mt-2 font-sans">
-                  <span className="text-neon-green">9.41 CGPA</span>
-                  <span className="text-gray-400">Nov. 2022 – May 2026</span>
+                  <span className="text-neon-green">Senior Undergraduate</span>
+                  <span className="text-gray-400">Current</span>
                 </div>
               </div>
             </div>
@@ -100,7 +99,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-tech-800 rounded-lg overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-tech-900 to-tech-700 flex items-center justify-center">
                   {/* Replace with actual image if available */}
-                  <span className="text-6xl font-bold text-gradient font-sans">SK</span>
+                  <span className="text-5xl font-bold text-gradient font-sans">Sriman</span>
                 </div>
                 
                 {/* Tech pattern overlay */}
@@ -110,9 +109,9 @@ const AboutSection = () => {
                 <pre className="absolute bottom-4 left-4 text-[0.6rem] text-neon-blue opacity-50 font-mono">
                   <code>
                     {`const developer = {
-  name: "Svayam",
-  skills: ["React", "Node"],
-  passion: "Building web apps"
+  name: "Sriman",
+  skills: ["AI", "ML", "DB"],
+  passion: "Solving problems"
 };`}
                   </code>
                 </pre>

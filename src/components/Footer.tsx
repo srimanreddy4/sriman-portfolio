@@ -9,18 +9,18 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <div className="flex items-center">
               <div className="relative mr-2">
-                <span className="text-xl font-mono font-bold text-glow">SK</span>
+                <span className="text-xl font-mono font-bold text-glow">Sriman</span>
                 <span className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-neon-purple rounded-full"></span>
               </div>
-              <span className="text-gray-400 text-sm">© {new Date().getFullYear()} Svayam Kapadia</span>
+              <span className="text-gray-400 text-sm">© {new Date().getFullYear()} Sriman Reddy</span>
             </div>
           </div>
           
           <div className="text-center md:text-right">
-            <p className="text-sm text-gray-400 mb-2">Designed & Built with ❤️</p>
+            <p className="text-sm text-gray-400 mb-2">Inspired by Svayam Kapadia</p>
             <div className="flex justify-center md:justify-end space-x-4">
               <a 
-                href="https://www.linkedin.com/in/svayam-kapadia-78218b246/" 
+                href="https://www.linkedin.com/in/sriman-reddy-812061276/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="interactive-element text-gray-400 hover:text-neon-blue transition-colors duration-300"
@@ -31,7 +31,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://github.com/K-Svayam05" 
+                href="https://github.com/srimanreddy4" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="interactive-element text-gray-400 hover:text-neon-blue transition-colors duration-300"
@@ -42,7 +42,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="mailto:svayamkapadia.work@gmail.com" 
+                href="sriman.personal23@gmail.com" 
                 className="interactive-element text-gray-400 hover:text-neon-blue transition-colors duration-300"
                 aria-label="Email"
               >

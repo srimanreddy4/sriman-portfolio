@@ -19,63 +19,79 @@ const SkillItem = ({ name, level }: { name: string; level: number }) => {
   );
 };
 
+const SkillPoint = ({ name }: { name: string }) => {
+  return (
+    <div className="flex items-center mb-3">
+      <span className="text-neon-blue mr-2">▹</span>
+      <span className="font-medium">{name}</span>
+    </div>
+  );
+};
+
 const SkillsSection = () => {
   const skillCategories = [
     {
       id: 'languages',
       title: 'Languages',
+      type: 'points',
       skills: [
-        { name: 'JavaScript/TypeScript', level: 95 },
-        { name: 'Python', level: 90 },
-        { name: 'Java', level: 85 },
-        { name: 'C/C++', level: 80 },
-        { name: 'SQL', level: 85 },
-        { name: 'HTML/CSS', level: 95 },
+        'C/C++',
+        'Python',
+        'JavaScript',
+        'HTML/CSS',
+        'Dart',
+        'MYSQL',
+        'Matlab',
+        'Verilog'
       ]
     },
     {
       id: 'frameworks',
-      title: 'Frameworks',
+      title: 'Frameworks & Libraries',
+      type: 'bars',
       skills: [
-        { name: 'React.js', level: 95 },
-        { name: 'Next.js', level: 90 },
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 85 },
-        { name: 'TensorFlow', level: 75 },
-        { name: 'PyTorch', level: 70 },
+        { name: 'React', level: 90 },
+        { name: 'Flask', level: 85 },
+        { name: 'Flutter', level: 80 },
+        { name: 'PyTorch', level: 85 },
+        { name: 'TensorFlow', level: 80 },
+        { name: 'Langchain', level: 85 },
       ]
     },
     {
       id: 'tools',
-      title: 'Tools & Databases',
+      title: 'Tools & Technologies',
+      type: 'points',
       skills: [
-        { name: 'MongoDB', level: 88 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'Git/GitHub', level: 92 },
-        { name: 'AWS/GCP', level: 80 },
-        { name: 'Framer', level: 85 },
-        { name: 'Postman', level: 90 },
+        'Git',
+        'Hugging Face',
+        'Numpy',
+        'Pandas',
+        'Matplotlib',
+        'Scikit-learn',
+        'TRL',
+        'Autogen',
+        'LaTeX',
+        'VLLM',
+        'Docx',
+        'PyPDF',
+        'Autodesk Inventor Professional',
+        'Laser Cutting',
+        '3D Printing'
       ]
     },
     {
-      id: 'emerging',
-      title: 'Emerging Tech',
+      id: 'achievements',
+      title: 'Achievements',
+      type: 'achievements',
       skills: [
-        { name: 'Generative AI (LLMs)', level: 88 },
-        { name: 'Blockchain', level: 70 },
-        { name: 'Quantum Computing', level: 65 },
-        { name: 'AI Agents', level: 80 },
-        { name: 'Cybersecurity', level: 75 },
+        'Recipient of the Reliance Foundation Undergraduate scholarship for exemplary academic performance',
+        'Designated as a KVPY scholar based on the All-India KVPY examination 2021 with an AIR rank of 821',
+        'Secured AIR (All India Rank) of 1203 in JEE Advanced 2022 and scored 342/390 in BITSAT 2022',
+        'Felicitated with the prestigious Dean\'s List Award for all Semesters (I to II) for securing a SPI of >= 8.5/10',
+        'Selected as the volunteer research assistant for FSIL(Financial Services Innovation Lab) at Georgia Institute of Technology'
       ]
     }
-  ];
-
-  const achievements = [
-    { title: 'Gold Level', description: 'WorldQuant University' },
-    { title: 'AIR-4', description: 'Naukri Campus EROH \'25' },
-    { title: 'Winner', description: 'SIH 2024' },
-    { title: 'Semifinalist', description: 'Tata Imagination Challenge \'24' },
-    { title: 'Global Rank 87', description: 'CodeChef Starters 148' },
   ];
 
   return (
@@ -86,119 +102,72 @@ const SkillsSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white">
-            <span className="text-neon-blue font-mono mr-2">04.</span> Skills & Achievements
+            <span className="text-neon-blue font-mono mr-2">05.</span> Skills & Achievements
           </h2>
           <div className="h-px bg-gradient-to-r from-neon-blue to-transparent flex-grow ml-4"></div>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="md:col-span-2">
-            <Tabs defaultValue="languages" className="w-full">
-              <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-tech-800/50 p-2 mb-8 rounded-lg">
-                {skillCategories.map((category) => (
-                  <TabsTrigger
-                    key={category.id}
-                    value={category.id}
-                    className="interactive-element data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue"
-                  >
-                    {category.title}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-              
+        <div className="max-w-6xl mx-auto">
+          <Tabs defaultValue="languages" className="w-full">
+            <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-tech-800/50 p-2 mb-8 rounded-lg">
               {skillCategories.map((category) => (
-                <TabsContent key={category.id} value={category.id} className="p-1">
-                  <div className="bg-tech-800/20 p-6 rounded-lg border border-border">
-                    <h3 className="text-xl font-bold text-white mb-6">{category.title}</h3>
-                    <div className="grid md:grid-cols-2 gap-x-8">
+                <TabsTrigger
+                  key={category.id}
+                  value={category.id}
+                  className="interactive-element data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue transition-all duration-200"
+                >
+                  {category.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            
+            {skillCategories.map((category) => (
+              <TabsContent key={category.id} value={category.id} className="p-1">
+                <div className="bg-tech-800/20 p-6 rounded-lg border border-border">
+                  <h3 className="text-xl font-bold text-white mb-6">{category.title}</h3>
+                  
+                  {category.type === 'points' && (
+                    <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-x-8">
                       {category.skills.map((skill, index) => (
-                        <AnimatedText 
-                          key={index} 
-                          text="" 
-                          delay={index * 100}
-                        >
-                          <SkillItem name={skill.name} level={skill.level} />
-                        </AnimatedText>
+                        <div key={index}>
+                          <SkillPoint name={skill} />
+                        </div>
                       ))}
                     </div>
-                  </div>
-                </TabsContent>
-              ))}
-            </Tabs>
-          </div>
-          
-          <div>
-            <div className="bg-tech-800/30 p-6 rounded-lg border border-border h-full">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
-                <span className="text-neon-green mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M8.21 13.89L7 23l7-4 7 4-1.21-9.11"></path>
-                    <path d="M15 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
-                  </svg>
-                </span>
-                Achievements
-              </h3>
-              
-              <div className="space-y-6">
-                {achievements.map((achievement, index) => (
-                  <AnimatedText 
-                    key={index} 
-                    text="" 
-                    className="flex items-center" 
-                    delay={index * 200}
-                  >
-                    <div className="relative">
-                      <div className="flex items-start">
-                        <div className="mr-4">
-                          <div className="w-3 h-3 rounded-full bg-neon-purple"></div>
-                          {index !== achievements.length - 1 && (
-                            <div className="w-0.5 h-full bg-gradient-to-b from-neon-purple to-transparent absolute ml-1.5 mt-3"></div>
-                          )}
+                  )}
+                  
+                  {category.type === 'bars' && (
+                    <div className="grid md:grid-cols-2 gap-x-8">
+                      {category.skills.map((skill, index) => (
+                        <div key={index}>
+                          <SkillItem name={skill.name} level={skill.level} />
                         </div>
-                        <div>
-                          <h4 className="font-bold">{achievement.title}</h4>
-                          <p className="text-gray-400">{achievement.description}</p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
-                  </AnimatedText>
-                ))}
-              </div>
-              
-              <div className="mt-8 pt-6 border-t border-tech-700">
-                <h4 className="font-bold mb-3">Coding Profiles</h4>
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href="https://www.codechef.com/users/svayam_05"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="interactive-element px-4 py-2 bg-tech-700 rounded-md text-sm hover:bg-tech-600 transition-colors duration-300"
-                  >
-                    CodeChef
-                  </a>
-                  <a
-                    href="https://leetcode.com/u/svayam_05/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="interactive-element px-4 py-2 bg-tech-700 rounded-md text-sm hover:bg-tech-600 transition-colors duration-300"
-                  >
-                    LeetCode
-                  </a>
-                  <a
-                    href="https://codeforces.com/profile/svayam.005"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="interactive-element px-4 py-2 bg-tech-700 rounded-md text-sm hover:bg-tech-600 transition-colors duration-300"
-                  >
-                    Codeforces
-                  </a>
+                  )}
+                  
+                  {category.type === 'achievements' && (
+                    <div className="space-y-4">
+                      {category.skills.map((achievement, index) => (
+                        <div key={index} className="flex items-start">
+                          <span className="text-neon-green mr-3 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M8.21 13.89L7 23l7-4 7 4-1.21-9.11"></path>
+                              <path d="M15 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
+                            </svg>
+                          </span>
+                          <p className="text-gray-300">{achievement}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </div>
-            </div>
-          </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
         
-        <div>
+        <div className="mt-16">
           <h3 className="text-xl font-bold text-white mb-6 flex items-center">
             <span className="text-neon-blue mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -216,27 +185,23 @@ const SkillsSection = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              'Introduction to LLMs (Google Cloud)',
-              'Full Stack Web Development (Skill India NSDC)',
-              'Introduction to AI Fundamentals (IBM & Coursera)',
-              'CyberSecurity (ADBI E-Learning)'
+              'Machine Learning Specalizarion by Andrew NG,(Courseera)',
+              'Game Development with Unity and C# (Coursera)',
+              'AI in medicine (Coursera)',
+              'Deep Learning Specialization by Andrew NG,(Coursera)',
+              'Introduction to AI Fundamentals (Coursera)',
+              'CyberSecurity (Intern Learning)'
             ].map((cert, index) => (
-              <AnimatedText 
-                key={index} 
-                text="" 
-                delay={index * 100}
-              >
-                <div className="bg-tech-800/20 p-4 rounded-lg border border-tech-700">
-                  <div className="flex items-start">
-                    <div className="min-w-6 h-6 rounded-full bg-neon-green/20 flex items-center justify-center mr-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neon-green">
-                        <path d="M20 6 9 17l-5-5"></path>
-                      </svg>
-                    </div>
-                    <p>{cert}</p>
+              <div key={index} className="bg-tech-800/20 p-4 rounded-lg border border-tech-700">
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-neon-green/20 flex items-center justify-center mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neon-green">
+                      <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
                   </div>
+                  <p>{cert}</p>
                 </div>
-              </AnimatedText>
+              </div>
             ))}
           </div>
         </div>

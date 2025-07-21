@@ -10,6 +10,7 @@ const NavBar = () => {
     { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Blogs', href: '#blogs' },
     { label: 'Skills', href: '#skills' },
     { label: 'Contact', href: '#contact' }
   ];
@@ -44,7 +45,7 @@ const NavBar = () => {
         {/* Logo */}
         <a href="#home" className="interactive-element flex items-center">
           <div className="relative">
-            <span className="text-2xl font-mono font-bold text-glow">SK</span>
+            <span className="text-2xl font-mono font-bold text-glow">Sriman</span>
             <span className="absolute -top-1 -right-1 w-2 h-2 bg-neon-purple rounded-full"></span>
           </div>
         </a>
@@ -64,7 +65,7 @@ const NavBar = () => {
           
           {/* Resume button */}
           <a 
-            href="https://drive.google.com/file/d/1FibWp-Elm3bsVVjdrG7KciwLl2cLQvBV/view?usp=sharing"
+            href="https://drive.google.com/file/d/1bBp9zDT_Jrq9JlNGRKDh6W0BsbN8t9I9/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="interactive-element px-4 py-2 border border-neon-blue text-neon-blue rounded hover:bg-neon-blue/10 transition-all duration-300 font-sans"
@@ -115,7 +116,7 @@ const NavBar = () => {
             ))}
             
             <a 
-              href="https://drive.google.com/file/d/1FibWp-Elm3bsVVjdrG7KciwLl2cLQvBV/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1bBp9zDT_Jrq9JlNGRKDh6W0BsbN8t9I9/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="interactive-element mt-4 block text-center px-4 py-2 border border-neon-blue text-neon-blue rounded hover:bg-neon-blue/10 transition-all duration-300 font-sans"
