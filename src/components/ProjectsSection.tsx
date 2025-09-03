@@ -77,6 +77,12 @@ const ProjectCard = ({
 const ProjectsSection = () => {
   const projects = [
     {
+      title: 'Advanced Systems and Network Programming Toolkit (C++)',
+      description: 'Built a thread-caching memory allocator achieving 2.5x throughput, created a lightweight container using Linux primitives with namespaces/cgroups, and engineered an event-driven web server handling thousands of concurrent connections using epoll.',
+      tech: ['C++', 'Linux Systems', 'Memory Management', 'Networking', 'Containers'],
+      link: 'https://github.com/srimanreddy4/OS-and-Networks-projects'
+    },
+    {
       title: 'Lucent Programming Language Implementation',
       description: 'Designed and implemented a statically-typed programming language with robust control flow, first-class functions with closures, and user-defined types. Built a bytecode compiler and virtual machine with optimizations.',
       tech: ['Python', 'Compiler Design', 'Virtual Machine', 'Bytecode'],
@@ -86,7 +92,7 @@ const ProjectsSection = () => {
       title: 'LLM Chatbot for Hospitality',
       description: 'Comprehensive hospitality management system with voice and chat capabilities for bookings, services, and FAQs. Features real-time dashboard, telephony integration, and personalized AI suggestions.',
       tech: ['Node.js', 'Express', 'React', 'Vite', 'MongoDB', 'Socket.io'],
-      link: '#'
+      link: 'https://github.com/srimanreddy4/AI-Chatbot--Hospitality'
     },
     {
       title: 'Drowsy Driving Detection using BCI Technology',

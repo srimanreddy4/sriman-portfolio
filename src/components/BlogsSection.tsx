@@ -100,6 +100,22 @@ const BlogCard = ({
 const BlogsSection = () => {
   const blogs = [
     {
+      title: 'From Scratch: A Deep Dive into Fine-Tuning Phi-3.5 for Clinical Q&A',
+      description: 'A practical guide covering everything from initial setup hurdles to specific fine-tuning strategies for clinical question-answering using microsoft/phi-3.5-mini-instruct. Demystifying techniques like Low-Rank Adaptation (LoRA) that make training massive models possible on limited hardware.',
+      date: 'Dec 2024',
+      readTime: '18 min read',
+      tags: ['Fine-tuning', 'Phi-3.5', 'Clinical AI', 'LoRA'],
+      link: 'https://medium.com/@kondam.reddy/from-scratch-a-deep-dive-into-fine-tuning-phi-3-5-for-clinical-q-a-a49cb01b2414'
+    },
+    {
+      title: 'Stop Blindly Trusting Hugging Face Downloads: What Our Research Uncovered',
+      description: 'An in-depth investigation revealing the "rich get richer" dynamic in model hubs. Our research uncovers whether popularity contests on platforms like Hugging Face actually help advance the field or create echo chambers that hide potentially better models.',
+      date: 'Nov 2024',
+      readTime: '14 min read',
+      tags: ['Research', 'Model Hubs', 'Hugging Face', 'ML Community'],
+      link: 'https://medium.com/@kondam.reddy/stop-blindly-trusting-hugging-face-downloads-what-our-research-uncovered-68a4c70f7296'
+    },
+    {
       title: 'Agent Building using LangGraph for Document Editing',
       description: 'A comprehensive guide to building intelligent agents using LangGraph for document editing tasks. Covering my experience developing agentic systems that can understand, process, and edit lengthy documents with advanced prompt engineering techniques.',
       date: 'Jul 2024',

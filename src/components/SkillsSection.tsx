@@ -85,6 +85,7 @@ const SkillsSection = () => {
       title: 'Achievements',
       type: 'achievements',
       skills: [
+        'Flipkart Grid 7.0 Semifinalist',
         'Recipient of the Reliance Foundation Undergraduate scholarship for exemplary academic performance',
         'Designated as a KVPY scholar based on the All-India KVPY examination 2021 with an AIR rank of 821',
         'Secured AIR (All India Rank) of 1203 in JEE Advanced 2022 and scored 342/390 in BITSAT 2022',
